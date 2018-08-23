@@ -29,7 +29,7 @@
     dest: /etc/yum.repos.d/docker-ce.repo
 
 - name: Install docker
-  package: name="docker-ce" state={{ docker_ce_version }}
+  package: name="docker-ce-{{ docker_ce_version }}.ce" state="present"
   become: true
 
 - name: Start docker
