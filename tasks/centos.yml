@@ -65,6 +65,7 @@
 - name: Install docker python module
   become: true
   pip:
+    executable: pip3
     name: "{{ item }}"
     state: present
   with_items:
